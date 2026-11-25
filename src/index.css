@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/* ───────── Design tokens ───────── */
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-script: "Great Vibes", cursive;
+  --font-display: "Marcellus", "Cormorant Garamond", serif;
+  --font-arabic: "Amiri", serif;
+
+  --color-jade-950: #082a21;
+  --color-jade-900: #0b3328;
+  --color-jade-800: #0f4434;
+  --color-jade-700: #155a45;
+  --color-jade-600: #1f7357;
+  --color-ivory: #fbf7ee;
+  --color-ivory-deep: #f3ecdc;
+  --color-gold: #c39a45;
+  --color-gold-light: #e3c98a;
+  --color-gold-dark: #94722b;
+  --color-ink: #1f2d27;
+}
+
+/* ───────── Base ───────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    background-color: var(--color-ivory);
+    font-family: var(--font-serif);
+    color: var(--color-ink);
+    font-size: 1.125rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  section[id] {
+    scroll-margin-top: 3.5rem;
+  }
+  ::selection {
+    background: var(--color-gold-light);
+    color: var(--color-jade-900);
+  }
+}
+
+/* ───────── Reusable components ───────── */
+@layer components {
+  .eyebrow {
+    font-family: var(--font-display);
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+  }
+  @media (min-width: 40rem) {
+    .eyebrow {
+      font-size: 0.75rem;
+    }
+  }
+
+  .gold-text {
+    color: transparent;
+    background: linear-gradient(100deg, #94722b, #e3c98a 35%, #c39a45, #f1dfae 75%, #94722b) 0 0 / 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 7s linear infinite;
+  }
+
+  .arch {
+    border-radius: 999px 999px 1.25rem 1.25rem;
+  }
+
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-jade-950);
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #e3c98a, #c39a45 55%, #a9832f);
+    box-shadow: 0 10px 30px -12px #94722bcc, inset 0 1px #ffffff73;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px -12px #94722be6, inset 0 1px #ffffff73;
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-jade-800);
+    border: 1px solid #c39a4599;
+    border-radius: 9999px;
+    transition: all 0.3s;
+  }
+  @media (hover: hover) {
+    .btn-outline:hover {
+      border-color: var(--color-gold);
+      background-color: var(--color-gold);
+      color: var(--color-ivory);
+    }
+  }
+  .btn-gold:focus-visible,
+  .btn-outline:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+  .btn-outline--on-dark {
+    border-color: #e3c98a99;
+    color: var(--color-gold-light);
+  }
+  @media (hover: hover) {
+    .btn-outline--on-dark:hover {
+      background-color: var(--color-gold-light);
+      border-color: var(--color-gold-light);
+      color: var(--color-jade-900);
+    }
+  }
+}
+
+/* ───────── Scroll reveal ───────── */
+.reveal {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition: opacity 1s, transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal-up { transform: translateY(28px); }
+.reveal-zoom { transform: scale(0.94); }
+.reveal-left { transform: translateX(-28px); }
+.reveal-right { transform: translateX(28px); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ───────── Keyframes & animation helpers ───────── */
+@keyframes shimmer { to { background-position: -200%; } }
+@keyframes swing { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50% { opacity: 0.9; transform: scale(1); }
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes glow { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+@keyframes eq { 0%, 100% { transform: scaleY(0.3); } 50% { transform: scaleY(1); } }
+@keyframes scroll-dot {
+  0% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 0; }
+}
+
+.animate-swing { transform-origin: top; animation: swing 5s ease-in-out infinite; }
+.animate-twinkle { animation: twinkle 3.5s ease-in-out infinite; }
+.animate-fade-in-up { animation: fade-in-up 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.animate-glow { animation: glow 3s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transition: none; transform: none; }
+  .gold-text, .animate-swing, .animate-twinkle, .animate-glow, .animate-fade-in-up { animation: none; }
+}
