@@ -39,7 +39,7 @@ export const wedding = {
       time: 'Time to be announced',
       venue: 'At our residence',
       address: 'Vill - Raipur, Post office- Gohi, Police Station - Warisnagar, District - Samstipur , Bihar - 848301',
-      map: mapLink('Jama masjid, Vill - Raipur, Post office- Gohi, Police Station - Warisnagar, District - Samstipur , Bihar - 848301'),
+      map: mapLink('WV86+M94, Warisnagar, Raipur, Bihar 848301'),
     },
     {
       id: 'nikah',
@@ -51,7 +51,7 @@ export const wedding = {
       venue: '---------',
       address:
         'Vill - Raipur, Post office- Gohi, Police Station - Warisnagar, District - Samstipur , Bihar - 848301',
-      map: mapLink('Jama masjid, Vill - Raipur, Post office- Gohi, Police Station - Warisnagar, District - Samstipur , Bihar - 848301'),
+      map: mapLink('WV86+M94, Warisnagar, Raipur, Bihar 848301'),
       featured: true,
     },
     {
@@ -63,7 +63,7 @@ export const wedding = {
       time: '7:00 PM onwards',
       venue: 'At our residence',
       address: 'Vill - Raipur, Post office- Gohi, Police Station - Warisnagar, District - Samstipur , Bihar - 848301',
-      map: mapLink('Vill - Raipur, Post office- Gohi, Police Station - Warisnagar, District - Samstipur , Bihar - 848301'),
+      map: mapLink('WV86+M94, Warisnagar, Raipur, Bihar 848301'),
     },
   ],
 
