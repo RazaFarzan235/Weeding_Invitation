@@ -48,10 +48,10 @@ export const wedding = {
       tagline: 'The sacred union, sealed with the blessings of Allah',
       date: '2027-03-20',
       time: 'Time to be announced',
-      venue: '---------',
+      venue: 'At Mrs &mr shabbir ahmad residence',
       address:
-        'Vill - Mishroulia Dih, Post office - Chandan Patti, Police Station - Sakra, District - Muzaffarpur, Bihar',
-      map: mapLink('Mishroulia Dih, Chandan Patti, Sakra, Muzaffarpur, Bihar'),
+        'Vill - Mishroulia Dih, Post office - Chandan Patti, Police Station - Sakra, District - Muzaffarpur, Bihar -843104',
+      map: mapLink('Mishroulia Dih, Chandan Patti, Sakra, Muzaffarpur, Bihar 843104'),
       featured: true,
     },
     {
