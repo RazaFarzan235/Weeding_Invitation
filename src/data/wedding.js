@@ -16,7 +16,7 @@ export const wedding = {
     parentage: 'D/O Shabir Ahmad',
     initial: 'B',
   },
-  city: 'Mumbai',
+  city: 'Bihar',
   dateRange: '20 – 21 March 2027',
   hashtag: '#ShadmanWedsBushra',
   countdownTo: '2027-03-20T12:00:00+05:30',
