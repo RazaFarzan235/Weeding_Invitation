@@ -7,17 +7,20 @@
   --font-display: "Marcellus", "Cormorant Garamond", serif;
   --font-arabic: "Amiri", serif;
 
-  --color-jade-950: #082a21;
-  --color-jade-900: #0b3328;
-  --color-jade-800: #0f4434;
-  --color-jade-700: #155a45;
-  --color-jade-600: #1f7357;
-  --color-ivory: #fbf7ee;
-  --color-ivory-deep: #f3ecdc;
+  /* Blush & Mauve palette: light surfaces, deep mauve text, champagne gold accents */
+  --color-mauve-950: #4a2f3a;
+  --color-mauve-900: #5b3c48;
+  --color-mauve-800: #6e4b58;
+  --color-mauve-700: #8c6876;
+  --color-mauve-600: #b08c99;
+  --color-ivory: #fdf8f6;
+  --color-ivory-deep: #f8eeea;
+  --color-blush: #f5e4df;
+  --color-blush-deep: #ecd3cc;
   --color-gold: #c39a45;
   --color-gold-light: #e3c98a;
   --color-gold-dark: #94722b;
-  --color-ink: #1f2d27;
+  --color-ink: #3b2f35;
 }
 
 /* ───────── Base ───────── */
@@ -39,7 +42,7 @@
   }
   ::selection {
     background: var(--color-gold-light);
-    color: var(--color-jade-900);
+    color: var(--color-mauve-900);
   }
 }
 
@@ -79,7 +82,7 @@
     font-size: 0.75rem;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: var(--color-jade-950);
+    color: var(--color-mauve-950);
     border-radius: 9999px;
     background: linear-gradient(135deg, #e3c98a, #c39a45 55%, #a9832f);
     box-shadow: 0 10px 30px -12px #94722bcc, inset 0 1px #ffffff73;
@@ -101,7 +104,7 @@
     font-size: 0.68rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--color-jade-800);
+    color: var(--color-mauve-800);
     border: 1px solid #c39a4599;
     border-radius: 9999px;
     transition: all 0.3s;
@@ -117,17 +120,6 @@
   .btn-outline:focus-visible {
     outline: 2px solid var(--color-gold);
     outline-offset: 3px;
-  }
-  .btn-outline--on-dark {
-    border-color: #e3c98a99;
-    color: var(--color-gold-light);
-  }
-  @media (hover: hover) {
-    .btn-outline--on-dark:hover {
-      background-color: var(--color-gold-light);
-      border-color: var(--color-gold-light);
-      color: var(--color-jade-900);
-    }
   }
 }
 

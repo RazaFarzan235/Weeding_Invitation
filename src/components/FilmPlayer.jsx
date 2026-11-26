@@ -40,13 +40,13 @@ export default function FilmPlayer({ onPlayingChange }) {
   return (
     <Section
       id="film"
-      className="bg-jade-900"
-      background={<GeometricPattern className="absolute inset-0 text-gold/10" />}
+      className="bg-blush"
+      background={<GeometricPattern className="absolute inset-0 text-gold/15" />}
     >
-      <SectionHeading light eyebrow="A glimpse of our joy" title="Invitation Film" subtitle="Press play and celebrate with us." />
+      <SectionHeading eyebrow="A glimpse of our joy" title="Invitation Film" subtitle="Press play and celebrate with us." />
 
       <Reveal variant="zoom" className="mx-auto w-full max-w-[22rem]">
-        <div className="arch border border-gold/70 bg-jade-800 p-2 shadow-[0_40px_80px_-30px_rgb(0_0_0/0.6)]">
+        <div className="arch border border-gold/70 bg-blush-deep p-2 shadow-[0_40px_80px_-30px_rgb(110_75_88/0.45)]">
           <div className="arch relative overflow-hidden border border-gold/40 bg-black">
             <video
               ref={videoRef}
@@ -72,10 +72,10 @@ export default function FilmPlayer({ onPlayingChange }) {
                 onClick={togglePlay}
                 aria-label="Play video"
                 className={`absolute inset-0 flex items-center justify-center transition ${
-                  started ? 'bg-black/20' : 'bg-gradient-to-t from-jade-950/70 via-transparent to-transparent'
+                  started ? 'bg-black/20' : 'bg-gradient-to-t from-mauve-950/60 via-transparent to-transparent'
                 }`}
               >
-                <span className="relative flex h-20 w-20 items-center justify-center rounded-full bg-ivory/90 text-jade-800 shadow-xl ring-4 ring-gold/50 transition hover:scale-105">
+                <span className="relative flex h-20 w-20 items-center justify-center rounded-full bg-ivory/90 text-mauve-800 shadow-xl ring-4 ring-gold/50 transition hover:scale-105">
                   <span className="absolute inset-0 animate-ping rounded-full bg-gold/30" />
                   <Icon d={ICON_PATHS.play} className="relative ml-1 h-9 w-9" />
                 </span>

@@ -19,7 +19,7 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
-        <a href="#home" className="shrink-0 font-script text-3xl text-jade-800">
+        <a href="#home" className="shrink-0 font-script text-3xl text-mauve-800">
           {wedding.groom.initial}
           <span className="text-gold">&amp;</span>
           {wedding.bride.initial}
@@ -27,7 +27,7 @@ export default function Navbar() {
         <ul className="flex gap-5 sm:gap-7">
           {navLinks.map(({ label, href, hideOnMobile }) => (
             <li key={href} className={hideOnMobile ? 'hidden sm:block' : ''}>
-              <a href={href} className="eyebrow whitespace-nowrap text-jade-700 transition hover:text-gold-dark">
+              <a href={href} className="eyebrow whitespace-nowrap text-mauve-700 transition hover:text-gold-dark">
                 {label}
               </a>
             </li>

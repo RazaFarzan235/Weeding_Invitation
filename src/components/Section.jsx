@@ -1,16 +1,16 @@
 import Reveal from './Reveal'
 import { Divider } from './Ornaments'
 
-export function SectionHeading({ eyebrow, title, subtitle, light = false }) {
+export function SectionHeading({ eyebrow, title, subtitle }) {
   return (
     <Reveal className="mb-12 text-center sm:mb-16">
-      {eyebrow && <p className={`eyebrow mb-3 ${light ? 'text-gold-light' : 'text-gold-dark'}`}>{eyebrow}</p>}
-      <h2 className={`font-script text-5xl leading-tight sm:text-6xl md:text-7xl ${light ? 'text-ivory' : 'text-jade-800'}`}>
+      {eyebrow && <p className="eyebrow mb-3 text-gold-dark">{eyebrow}</p>}
+      <h2 className="font-script text-5xl leading-tight text-mauve-800 sm:text-6xl md:text-7xl">
         {title}
       </h2>
       <Divider className="mt-4" />
       {subtitle && (
-        <p className={`mx-auto mt-5 max-w-xl text-lg italic sm:text-xl ${light ? 'text-ivory/80' : 'text-ink/70'}`}>{subtitle}</p>
+        <p className="mx-auto mt-5 max-w-xl text-lg italic text-ink/70 sm:text-xl">{subtitle}</p>
       )}
     </Reveal>
   )

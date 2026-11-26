@@ -98,7 +98,7 @@ export function FloralBranch({ className = '' }) {
       <path d="M70 128c-20-4-36 4-48 18M120 64c4-20 18-32 36-36" fill="none" className="stroke-gold" strokeWidth="0.9" />
       {LEAVES.map(([x, y, r], i) => (
         <g key={i} transform={`translate(${x} ${y}) rotate(${r})`}>
-          <path d={LEAF} className="fill-jade-600/75" />
+          <path d={LEAF} className="fill-mauve-600/75" />
           <path d="M1 0H20" className="stroke-gold-light" strokeWidth="0.6" />
         </g>
       ))}
@@ -161,20 +161,20 @@ export function MosqueSkyline({ className = '' }) {
 const EVENT_ICONS = {
   bowl: (
     <>
-      <path d="M8 30h48c-2 14-12 22-24 22S10 44 8 30z" className="fill-jade-700" />
+      <path d="M8 30h48c-2 14-12 22-24 22S10 44 8 30z" className="fill-mauve-700" />
       <path d="M8 30h48" className="stroke-gold" strokeWidth="2" />
       <ellipse cx="32" cy="29" rx="20" ry="4" className="fill-gold-light" />
       <path d="M22 41c3 3 7 3 10 0 3 3 7 3 10 0" fill="none" className="stroke-gold-light" strokeWidth="1.5" />
-      <path d="M10 26c-6-6-4-14 4-14-1 6 0 10-4 14zM54 26c6-6 4-14-4-14 1 6 0 10 4 14z" className="fill-jade-600" />
+      <path d="M10 26c-6-6-4-14 4-14-1 6 0 10-4 14zM54 26c6-6 4-14-4-14 1 6 0 10 4 14z" className="fill-mauve-600" />
     </>
   ),
   mosque: (
     <>
       <path d="M32 6v6" className="stroke-gold" strokeWidth="2" />
-      <path d="M18 30c0-10 8-15 14-18 6 3 14 8 14 18z" className="fill-jade-700" />
-      <path d="M16 30h32v24H16z" className="fill-jade-700" />
+      <path d="M18 30c0-10 8-15 14-18 6 3 14 8 14 18z" className="fill-mauve-700" />
+      <path d="M16 30h32v24H16z" className="fill-mauve-700" />
       <path d="M28 54V44c0-3 2-5 4-5s4 2 4 5v10z" className="fill-gold-light" />
-      <path d="M6 54V22l3-5 3 5v32zM52 54V22l3-5 3 5v32z" className="fill-jade-600" />
+      <path d="M6 54V22l3-5 3 5v32zM52 54V22l3-5 3 5v32z" className="fill-mauve-600" />
       <path d="M4 54h56" className="stroke-gold" strokeWidth="2" />
       <path d="M33 3a3 3 0 1 0 2 5 3.5 3.5 0 0 1-2-5z" className="fill-gold" />
     </>
@@ -182,9 +182,9 @@ const EVENT_ICONS = {
   dome: (
     <>
       <path d="M32 4v8" className="stroke-gold" strokeWidth="2" />
-      <path d="M12 34c0-14 12-20 20-24 8 4 20 10 20 24z" className="fill-jade-700" />
+      <path d="M12 34c0-14 12-20 20-24 8 4 20 10 20 24z" className="fill-mauve-700" />
       <path d="M10 34h44v4H10z" className="fill-gold" />
-      <path d="M14 38h36v16H14z" className="fill-jade-700" />
+      <path d="M14 38h36v16H14z" className="fill-mauve-700" />
       {[20, 28, 36, 44].map((x) => (
         <path key={x} d={`M${x - 2} 54v-9c0-2 1-3 2-3s2 1 2 3v9z`} className="fill-gold-light" />
       ))}

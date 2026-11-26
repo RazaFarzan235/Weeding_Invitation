@@ -4,7 +4,7 @@ import Reveal from './Reveal'
 import Section, { SectionHeading } from './Section'
 
 const navBtn =
-  'absolute top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-ivory/10 text-2xl text-ivory backdrop-blur transition hover:bg-gold'
+  'absolute top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-mauve-800/10 text-2xl text-mauve-800 backdrop-blur transition hover:bg-gold hover:text-ivory'
 
 function Lightbox({ index, onClose, onStep }) {
   const item = wedding.gallery[index]
@@ -26,7 +26,7 @@ function Lightbox({ index, onClose, onStep }) {
 
   return (
     <div
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-jade-950/95 p-4 [animation:fade-in-up_.35s_ease_both]"
+      className="fixed inset-0 z-[60] flex items-center justify-center bg-ivory/95 p-4 [animation:fade-in-up_.35s_ease_both]"
       role="dialog"
       aria-modal="true"
       aria-label={item.caption}
@@ -34,14 +34,14 @@ function Lightbox({ index, onClose, onStep }) {
     >
       <figure className="relative max-h-full" onClick={(e) => e.stopPropagation()}>
         <img src={item.src} alt={item.alt} className="max-h-[82svh] w-auto rounded-lg shadow-2xl ring-1 ring-gold/40" />
-        <figcaption className="eyebrow mt-4 text-center text-gold-light">{item.caption}</figcaption>
+        <figcaption className="eyebrow mt-4 text-center text-gold-dark">{item.caption}</figcaption>
       </figure>
 
       <button
         type="button"
         onClick={onClose}
         aria-label="Close"
-        className="absolute top-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-ivory/10 text-2xl text-ivory hover:bg-gold"
+        className="absolute top-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-mauve-800/10 text-2xl text-mauve-800 hover:bg-gold hover:text-ivory"
       >
         ×
       </button>
@@ -76,7 +76,7 @@ export default function Gallery() {
             <button
               type="button"
               onClick={() => setActive(i)}
-              className="group block w-full rounded-2xl border border-gold/50 bg-white p-2 shadow-[0_30px_60px_-30px_rgb(15_68_52/0.45)] transition duration-500 hover:-translate-y-1.5 focus-visible:outline-2 focus-visible:outline-gold"
+              className="group block w-full rounded-2xl border border-gold/50 bg-white p-2 shadow-[0_30px_60px_-30px_rgb(110_75_88/0.3)] transition duration-500 hover:-translate-y-1.5 focus-visible:outline-2 focus-visible:outline-gold"
             >
               <div className="overflow-hidden rounded-xl">
                 <img
@@ -86,7 +86,7 @@ export default function Gallery() {
                   className="aspect-[2/3] w-full object-cover transition duration-700 group-hover:scale-105"
                 />
               </div>
-              <p className="eyebrow py-4 text-jade-700">{item.caption}</p>
+              <p className="eyebrow py-4 text-mauve-700">{item.caption}</p>
             </button>
           </Reveal>
         ))}
