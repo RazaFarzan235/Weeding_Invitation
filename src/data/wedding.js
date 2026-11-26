@@ -50,8 +50,8 @@ export const wedding = {
       time: 'Time to be announced',
       venue: '---------',
       address:
-        'Vill - Raipur, Post office- Gohi, Police Station - Warisnagar, District - Samstipur , Bihar - 848301',
-      map: mapLink('WV86+M94, Warisnagar, Raipur, Bihar 848301'),
+        'Vill - Mishroulia Dih, Post office - Chandan Patti, Police Station - Sakra, District - Muzaffarpur, Bihar',
+      map: mapLink('Mishroulia Dih, Chandan Patti, Sakra, Muzaffarpur, Bihar'),
       featured: true,
     },
     {
