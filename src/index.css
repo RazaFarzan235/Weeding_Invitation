@@ -94,6 +94,42 @@
     box-shadow: 0 16px 36px -12px #94722be6, inset 0 1px #ffffff73;
   }
 
+  /* Cover call-to-action: a soft lift, travelling sheen, and pulse ring so the tap target is obvious. */
+  .btn-invite {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(
+      105deg,
+      #a9832f 0%,
+      #c39a45 20%,
+      #f6e7bc 36%,
+      #c39a45 52%,
+      #e3c98a 100%
+    );
+    background-size: 240% 100%;
+    animation: invite-sheen 2.8s ease-in-out infinite, invite-lift 2.2s ease-in-out infinite;
+  }
+  .btn-invite::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    z-index: -1;
+    border-radius: inherit;
+    border: 1px solid rgb(195 154 69 / 0.65);
+    animation: invite-ring 2.2s ease-out infinite;
+    pointer-events: none;
+  }
+  .btn-invite:hover,
+  .btn-invite:focus-visible {
+    animation: none;
+    background-position: 38% 0;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow:
+      0 18px 40px -12px #94722be6,
+      0 0 0 6px rgb(227 201 138 / 0.38),
+      inset 0 1px #ffffff73;
+  }
+
   .btn-outline {
     display: inline-flex;
     align-items: center;
@@ -153,6 +189,24 @@
   80% { opacity: 0; transform: translateY(14px); }
   100% { opacity: 0; }
 }
+@keyframes invite-lift {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 10px 30px -12px #94722bcc, inset 0 1px #ffffff73;
+  }
+  50% {
+    transform: translateY(-3px) scale(1.035);
+    box-shadow: 0 18px 36px -10px #94722be6, 0 0 0 7px rgb(227 201 138 / 0.28), inset 0 1px #ffffff73;
+  }
+}
+@keyframes invite-sheen {
+  0% { background-position: 100% 0; }
+  55%, 100% { background-position: 0% 0; }
+}
+@keyframes invite-ring {
+  0% { transform: scale(0.96); opacity: 0.75; }
+  100% { transform: scale(1.22); opacity: 0; }
+}
 
 .animate-swing { transform-origin: top; animation: swing 5s ease-in-out infinite; }
 .animate-twinkle { animation: twinkle 3.5s ease-in-out infinite; }
@@ -162,5 +216,6 @@
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transition: none; transform: none; }
-  .gold-text, .animate-swing, .animate-twinkle, .animate-glow, .animate-fade-in-up { animation: none; }
+  .gold-text, .animate-swing, .animate-twinkle, .animate-glow, .animate-fade-in-up,
+  .btn-invite, .btn-invite::before { animation: none; }
 }

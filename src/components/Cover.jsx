@@ -47,8 +47,8 @@ export default function Cover({ onOpen, onDone }) {
             </h1>
             <Divider className="mt-6" />
             <p className="eyebrow mt-4 text-gold-dark">{wedding.dateRange}</p>
-            <button type="button" onClick={handleOpen} className="btn-gold mt-9">
-              Open Invitation
+            <button type="button" onClick={handleOpen} className="btn-gold btn-invite mt-9">
+              <span>Open Invitation</span>
             </button>
             <p className="mt-4 text-sm italic text-ink/55">Best experienced with sound on</p>
           </div>
