@@ -91,7 +91,7 @@ export const wedding = {
   footer: {
     dua: 'دُعَاؤُكُمْ لَنَا بِالْخَيْرِ وَالْبَرَكَةِ',
     message: 'Your kind presence & prayers will make our day more special',
-    families: 'The Siddique & Shaikh Families',
+    families: 'The Raza  & Siddique Families',
   },
 }
 
