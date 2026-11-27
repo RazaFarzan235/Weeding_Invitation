@@ -13,7 +13,7 @@ export const wedding = {
   bride: {
     name: 'Bushra ',
     fullName: 'Bushra Siddiqua',
-    parentage: 'D/O Shabir Ahmad',
+    parentage: 'D/O Shabbir Ahmad',
     initial: 'B',
   },
   city: 'Bihar',
@@ -36,7 +36,7 @@ export const wedding = {
       title: 'Haldi',
       tagline: 'An evening of colour, laughter & heartfelt duas',
       date: '2027-03-19',
-      time: 'Time to be announced',
+      time: 'After Namaz - e - Maghrib',
       venue: 'At our residence',
       address: 'Vill - Raipur, Post office- Gohi, Police Station - Warisnagar, District - Samstipur , Bihar - 848301',
       map: mapLink('WV86+M94, Warisnagar, Raipur, Bihar 848301'),
@@ -47,7 +47,7 @@ export const wedding = {
       title: 'Nikah',
       tagline: 'The sacred union, sealed with the blessings of Allah',
       date: '2027-03-20',
-      time: 'Time to be announced',
+      time: 'After Namaz - e - Maghrib',
       venue: 'At Mrs &mr shabbir ahmad residence',
       address:
         'Vill - Mishroulia Dih, Post office - Chandan Patti, Police Station - Sakra, District - Muzaffarpur, Bihar -843104',
